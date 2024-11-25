@@ -1,163 +1,17 @@
-**POST: http://localhost:8080/api/v1/employees**
-```
-{
-  "name": "John Doe",
-  "email": "john.doe@example.com",
-  "phone": "1234567890",
-  "hireDate": "2024-01-10"
-}
-```
-**Response**
-```
-{
-  "id": 1,
-  "name": "John Doe",
-  "email": "john.doe@example.com",
-  "phone": "1234567890",
-  "hireDate": "2024-01-10",
-  "services": [ ]
-}
-```
-**POST: http://localhost:8080/api/v1/services**
-```
-{
-  "employeeId": 1,
-  "serviceName": "Oil Change",
-  "cost": 120.00,
-  "vehicleType": "Motorcycle"
-}
-```
-**Response**
-```
-{
-    "id": 1,
-    "serviceName": "Oil Change",
-    "cost": 120.0,
-    "vehicleType": "Motorcycle"
-}
-```
-**GET: http://localhost:8080/api/v1/employees**
-**Response**
-```
-[
-    {
-        "id": 1,
-        "name": "John Doe",
-        "email": "john.newemail@example.com",
-        "phone": "0987654321",
-        "hireDate": "2024-01-10",
-        "services": [
-            {
-                "id": 1,
-                "serviceName": "Oil Change",
-                "cost": 120.0,
-                "vehicleType": "Motorcycle"
-            }
-        ]
-    }
-]
-```
+* Add new employee:
+![Screenshot 2024-11-25 121847](https://github.com/user-attachments/assets/c4a25036-9d3b-4ab4-9efa-8406c3f46de6)
 
-**POST: http://localhost:8080/api/v1/services**
-```
-{
-  "employeeId": 1,
-  "serviceName": "Tire Replacement",
-  "cost": 180.50,
-  "vehicleType": "Truck"
-}
-```
+* Assign new vehicle:
+![Screenshot 2024-11-25 113509](https://github.com/user-attachments/assets/302691c4-e3e5-4f61-98fb-5dd125c59a09)
 
-**Response**
-{
-    "id": 2,
-    "serviceName": "Tire Replacement",
-    "cost": 180.5,
-    "vehicleType": "Truck"
-}
+*Get All employees:
 
-**GET: http://localhost:8080/api/v1/employees/1**
-**Response**
-```
-{
-    "id": 1,
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "phone": "1234567890",
-    "hireDate": "2024-01-10",
-    "services": [
-        {
-            "id": 1,
-            "serviceName": "Oil Change",
-            "cost": 120.0,
-            "vehicleType": "Motorcycle"
-        },
-        {
-            "id": 2,
-            "serviceName": "Tire Replacement",
-            "cost": 180.5,
-            "vehicleType": "Truck"
-        }
-    ]
-}
-```
+![Screenshot 2024-11-25 113218](https://github.com/user-attachments/assets/25ac9dfa-cd26-484d-acaf-8812be19d1ed)
 
-**GET: http://localhost:8080/api/v1/employees**
-**Response**
-```
-[
-    {
-        "id": 1,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "phone": "1234567890",
-        "hireDate": "2024-01-10",
-        "services": [
-            {
-                "id": 1,
-                "serviceName": "Oil Change",
-                "cost": 120.0,
-                "vehicleType": "Motorcycle"
-            },
-            {
-                "id": 2,
-                "serviceName": "Tire Replacement",
-                "cost": 180.5,
-                "vehicleType": "Truck"
-            }
-        ]
-    }
-]
-```
+*Get Employee by id:
 
-**PATCH: http://localhost:8080/api/v1/employees/1**
-```
-{
-  "email": "john.newemail@example.com",
-  "phone": "0987654321"
-}
-```
-**Response:**
-```
-{
-    "id": 1,
-    "name": "John Doe",
-    "email": "john.newemail@example.com",
-    "phone": "0987654321",
-    "hireDate": "2024-01-10",
-    "services": [
-        {
-            "id": 1,
-            "serviceName": "Oil Change",
-            "cost": 120.0,
-            "vehicleType": "Motorcycle"
-        },
-        {
-            "id": 2,
-            "serviceName": "Tire Replacement",
-            "cost": 180.5,
-            "vehicleType": "Truck"
-        }
-    ]
-}
-```
+![Screenshot 2024-11-25 122040](https://github.com/user-attachments/assets/04020642-2a39-4453-aeb3-b3f53b933066)
+
+*Update Employee:
+
+![Screenshot 2024-11-25 121818](https://github.com/user-attachments/assets/06d8b604-def8-4774-ae99-b6e2d8b5dcfb)
